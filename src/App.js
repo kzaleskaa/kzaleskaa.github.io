@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ThreeDots }  from "react-loader-spinner";
 import Layout from './components/layout/Layout';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Courses from './pages/Courses';
-import NotFound from './pages/NotFound';
+
+const Home = React.lazy(() => import('./pages/Home'));
+const Projects = React.lazy(() => import('./pages/Projects'));
+const Courses = React.lazy(() => import('./pages/Courses'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<ThreeDots/>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </Layout>
   );
 }
