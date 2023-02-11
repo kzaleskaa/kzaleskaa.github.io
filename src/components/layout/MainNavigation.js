@@ -1,17 +1,48 @@
-import { NavLink } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const MainNavigation = () => {
     return (
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/">Home</NavLink>
+                    <Link
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        // offset={-70}
+                        duration={500}
+                    >Home</Link>
                 </li>
                 <li>
-                    <NavLink to="/projects">Projects</NavLink>
+                    <Link
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        // offset={-70}
+                        duration={500}
+                    >projects</Link>
                 </li>
                 <li>
-                    <NavLink to="/courses">Courses</NavLink>
+                    <Link
+                        activeClass="active"
+                        to="courses"
+                        spy={true}
+                        smooth={true}
+                        // offset={-70}
+                        duration={500}
+                >courses</Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        // offset={-70}
+                        duration={500}
+                >contact</Link>
                 </li>
             </ul>
         </nav>
