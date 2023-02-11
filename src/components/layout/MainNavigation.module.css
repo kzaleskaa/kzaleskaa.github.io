@@ -1,0 +1,16 @@
+.main-navigation {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-gray);
+    color: var(--light-purple);
+}
+
+.main-navigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.active-link {
+    font-weight: 700;
+}
