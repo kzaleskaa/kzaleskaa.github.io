@@ -1,0 +1,12 @@
+.main-navigation {
+    position: fixed;
+}
+
+.main-navigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.active-link {
+    border-bottom: 1px solid #333;
+}

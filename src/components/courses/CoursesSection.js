@@ -1,5 +1,5 @@
 const CoursesSection = (props) => {
-    return <section id={props.id} style={{backgroundColor: "red", height: "100vh"}}>Courses Section</section>
+    return <section id={props.id} style={{backgroundColor: "purple", height: "100vh"}}></section>
 }
 
 export default CoursesSection;

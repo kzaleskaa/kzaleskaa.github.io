@@ -1,46 +1,48 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+
+import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
     return (
-        <nav>
+        <nav className={styles["main-navigation"]}>
             <ul>
-                <li>
+                <li className={styles["nav-item"]}>
                     <Link
-                        activeClass="active"
+                        activeClass={styles["active-link"]}
                         to="home"
-                        spy={true}
-                        smooth={true}
-                        // offset={-70}
+                        spy
+                        smooth
+                        offset={-70}
                         duration={500}
                     >Home</Link>
                 </li>
-                <li>
+                <li className={styles["nav-item"]}>
                     <Link
-                        activeClass="active"
+                        activeClass={styles["active-link"]}
                         to="projects"
-                        spy={true}
-                        smooth={true}
-                        // offset={-70}
+                        spy
+                        smooth
+                        offset={-70}
                         duration={500}
                     >projects</Link>
                 </li>
-                <li>
+                <li className={styles["nav-item"]}>
                     <Link
-                        activeClass="active"
+                        activeClass={styles["active-link"]}
                         to="courses"
-                        spy={true}
-                        smooth={true}
-                        // offset={-70}
+                        spy
+                        smooth
+                        offset={-70}
                         duration={500}
                 >courses</Link>
                 </li>
-                <li>
+                <li className={styles["nav-item"]}>
                     <Link
-                        activeClass="active"
+                        activeClass={styles["active-link"]}
                         to="contact"
-                        spy={true}
-                        smooth={true}
-                        // offset={-70}
+                        spy
+                        smooth
+                        offset={-70}
                         duration={500}
                 >contact</Link>
                 </li>
