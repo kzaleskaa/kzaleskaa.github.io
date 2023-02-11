@@ -1,5 +1,9 @@
 .main-navigation {
     position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-gray);
+    color: var(--light-purple);
 }
 
 .main-navigation li {
@@ -8,5 +12,5 @@
 }
 
 .active-link {
-    border-bottom: 1px solid #333;
+    font-weight: 700;
 }

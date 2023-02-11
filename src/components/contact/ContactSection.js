@@ -1,7 +1,7 @@
 import LinksList from "./LinksList";
 
 const ContactSection = (props) => {
-    return <section id={props.id} style={{backgroundColor: "red", height: "100vh"}}>
+    return <section id={props.id} style={{height: "100vh"}}>
         <LinksList />
     </section>
 }
