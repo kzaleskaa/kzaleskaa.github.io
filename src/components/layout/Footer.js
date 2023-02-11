@@ -1,7 +1,7 @@
 const Footer = () => {
     return(
         <footer>
-            footer
+            2023, created by <a href={process.env.REACT_APP_GITHUB_LINK}>kzaleskaa</a>.
         </footer>
     )
 }
