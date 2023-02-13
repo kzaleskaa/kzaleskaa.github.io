@@ -6,9 +6,21 @@
     color: var(--light-purple);
 }
 
+.expanded-menu {
+    background-color: red;
+}
+
 .main-navigation li {
     display: inline-block;
     margin-right: 10px;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    opacity: 0.8;
 }
 
 .active-link {

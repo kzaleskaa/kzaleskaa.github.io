@@ -1,14 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 
 import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
+    const [isNavExpanded, setIsNavExpanded] = useState(false);
+
     return (
-        <nav className={styles["main-navigation"]}>
+        <nav className={`${styles["main-navigation"]} ${isNavExpanded && styles["expanded-menu"]}`}>
             <ul>
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
+                        className={styles.link}
                         to="home"
                         spy
                         smooth
@@ -19,6 +23,7 @@ const MainNavigation = () => {
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
+                        className={styles.link}
                         to="projects"
                         spy
                         smooth
@@ -29,6 +34,7 @@ const MainNavigation = () => {
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
+                        className={styles.link}
                         to="courses"
                         spy
                         smooth
@@ -39,6 +45,7 @@ const MainNavigation = () => {
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
+                        className={styles.link}
                         to="contact"
                         spy
                         smooth
@@ -47,6 +54,9 @@ const MainNavigation = () => {
                 >contact</Link>
                 </li>
             </ul>
+            <button
+                onClick={() => {setIsNavExpanded(prev => !prev)}}
+            >X</button>
         </nav>
     )
 
