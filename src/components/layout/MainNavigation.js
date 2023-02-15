@@ -8,11 +8,20 @@ const MainNavigation = () => {
 
     return (
         <nav className={`${styles["main-navigation"]} ${isNavExpanded && styles["expanded-menu"]}`}>
+            <div 
+                className={`${styles["nav-burger"]} ${isNavExpanded &&  styles["open"]}`}
+                onClick={() => {setIsNavExpanded(prev => !prev)}}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
+                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="home"
                         spy
                         smooth
@@ -24,39 +33,39 @@ const MainNavigation = () => {
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
+                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="projects"
                         spy
                         smooth
                         offset={-70}
                         duration={500}
-                    >projects</Link>
+                    >Projects</Link>
                 </li>
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
+                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="courses"
                         spy
                         smooth
                         offset={-70}
                         duration={500}
-                >courses</Link>
+                >Courses</Link>
                 </li>
                 <li className={styles["nav-item"]}>
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
+                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="contact"
                         spy
                         smooth
                         offset={-70}
                         duration={500}
-                >contact</Link>
+                >Contact</Link>
                 </li>
             </ul>
-            <button
-                onClick={() => {setIsNavExpanded(prev => !prev)}}
-            >X</button>
         </nav>
     )
 
