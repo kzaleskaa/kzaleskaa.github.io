@@ -1,10 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleResize = () => {
+        if (window.innerWidth < 768) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    }
+
+    const closeExpandedMenu = () => {
+        if (isMobile == true) {
+            setIsNavExpanded(prev => !prev);
+        }
+    }
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+    })
 
     return (
         <nav className={`${styles["main-navigation"]} ${isNavExpanded && styles["expanded-menu"]}`}>
@@ -21,8 +41,8 @@ const MainNavigation = () => {
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
-                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="home"
+                        onClick={closeExpandedMenu}
                         spy
                         smooth
                         offset={-70}
@@ -33,8 +53,8 @@ const MainNavigation = () => {
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
-                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="projects"
+                        onClick={closeExpandedMenu}
                         spy
                         smooth
                         offset={-70}
@@ -45,8 +65,8 @@ const MainNavigation = () => {
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
-                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="courses"
+                        onClick={closeExpandedMenu}
                         spy
                         smooth
                         offset={-70}
@@ -57,8 +77,8 @@ const MainNavigation = () => {
                     <Link
                         activeClass={styles["active-link"]}
                         className={styles.link}
-                        onClick={() => {setIsNavExpanded(prev => !prev)}}
                         to="contact"
+                        onClick={closeExpandedMenu}
                         spy
                         smooth
                         offset={-70}
