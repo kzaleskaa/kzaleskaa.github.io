@@ -16,7 +16,7 @@ const MainNavigation = () => {
     }
 
     const closeExpandedMenu = () => {
-        if (isMobile == true) {
+        if (isMobile) {
             setIsNavExpanded(prev => !prev);
         }
     }
@@ -25,6 +25,14 @@ const MainNavigation = () => {
         handleResize();
         window.addEventListener("resize", handleResize);
     })
+
+    useEffect(() => {
+        if(isNavExpanded) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [isNavExpanded])
 
     return (
         <nav className={`${styles["main-navigation"]} ${isNavExpanded && styles["expanded-menu"]}`}>

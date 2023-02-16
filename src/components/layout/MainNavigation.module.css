@@ -19,21 +19,20 @@
 
 .main-navigation.expanded-menu {
     height: 100%;
-    overflow: hidden;
 }
 
 .main-navigation.expanded-menu ul {
-    transform: translateY(0vh);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 10px;
     height: 100%;
+    transform: translateY(0vh);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
 .main-navigation li {
@@ -54,11 +53,11 @@
 }
 
 .nav-burger {
-    margin-left: auto; 
-    margin-right: 0;
+    position: relative;
     width: 40px;
     height: 30px;
-    position: relative;
+    margin-left: auto; 
+    margin-right: 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -75,10 +74,10 @@
     position: absolute;
     height: 5px;
     width: 100%;
+    left: 0;
     background: var(--light-purple);
     border-radius: 9px;
     opacity: 1;
-    left: 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
