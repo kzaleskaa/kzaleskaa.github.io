@@ -32,3 +32,16 @@ body {
 ul {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+  color: var(--light-purple);
+}
+
+section {
+  margin: 20px 0px;
+}
+
+section h3 {
+  letter-spacing: 2px;
+}
