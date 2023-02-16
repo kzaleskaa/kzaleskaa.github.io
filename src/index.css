@@ -24,6 +24,11 @@ body {
   color: var(--light-white);
 }
 
+#root {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 ul {
   list-style: none;
 }
