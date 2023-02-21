@@ -42,6 +42,9 @@ section {
   margin: 20px 0px;
 }
 
+section h3:first-child {
+  text-align: center;
+}
 
 h1, h2, h3 {
   letter-spacing: 2px;

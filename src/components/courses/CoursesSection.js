@@ -1,6 +1,8 @@
+import CoursesLine from "./CoursesLine";
+
 const CoursesSection = (props) => {
-    return <section id={props.id} style={{height: "100vh"}}>
-        <h3>Courses</h3>
+    return <section id={props.id}>
+        <CoursesLine />
     </section>
 }
 
