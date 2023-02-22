@@ -1,6 +1,9 @@
+import ProjectsContainer from "./ProjectsContainer";
+
 const ProjectSection = (props) => {
-    return <section id={props.id} style={{height: "100vh"}}>
+    return <section id={props.id}>
         <h3>Projects</h3>
+        <ProjectsContainer />
     </section>
 }
 
