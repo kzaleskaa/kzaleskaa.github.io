@@ -14,7 +14,7 @@ const ProjectItem = (props) => {
         <h4>{title}</h4>
         <p>{description}</p>
         <div className={styles.tags}>
-            {tags.map((el, idx) => <span key={`tag-${project_id}-${idx}`}>{el}</span>)}
+            {tags.map((el, idx) => <button key={`tag-${project_id}-${idx}`} onClick={props.addTagFilter}>{el}</button>)}
         </div>
     </div>
 }
