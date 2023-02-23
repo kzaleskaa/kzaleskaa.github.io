@@ -1,9 +1,10 @@
-const Courses = () => {
-    return (
-        <div>
-        <h1>Courses</h1>
-        </div>
-    );
+import CoursesLine from "../components/courses/CoursesLine";
+
+const Courses = (props) => {
+    return <section id={props.id}>
+        <h3>Courses</h3>
+        <CoursesLine />
+    </section>
 }
 
 export default Courses;
