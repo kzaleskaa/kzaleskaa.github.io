@@ -8,8 +8,10 @@ const ProjectItem = (props) => {
     } = props.data;
 
     return <div className={styles.item}>
-        <img src={image} alt="project demo" />
-        <h4>{title}</h4>
+        <div className={styles["img-container"]}>
+            <img src={image} alt="project demo" />
+        </div>
+        <h3 className={styles.title}>{title}</h3>
         <p>{description}</p>
     </div>
 }
