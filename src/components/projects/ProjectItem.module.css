@@ -4,9 +4,9 @@
     padding: 20px 20px 40px 20px;
     border-radius: 4px;
     border-top: 2px solid var(--light-purple);
-    -webkit-box-shadow: 0px 0px 10px -5px var(--light-gra);
-    -moz-box-shadow: 0px 0px 10px -5px var(--light-gray);
-    box-shadow: 0px 0px 10px -5px var(--light-gray);
+    -webkit-box-shadow: 0px 0px 10px -5px var(--light-purple);
+    -moz-box-shadow: 0px 0px 10px -5px var(--light-purple);
+    box-shadow: 0px 0px 10px -5px var(--light-purple);
 }
 
 .img-container {
@@ -31,9 +31,7 @@
 
 .title {
     margin: 12px 0px;
-    text-shadow: 5px 5px 10px var(--light-purple);
-    /* make letters big */
-    /* text-transform: uppercase; */
+    /* text-shadow: 5px 5px 10px var(--light-purple); */
 }
 
 @media screen and (min-width: 768px) {
