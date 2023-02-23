@@ -1,15 +1,15 @@
-import HomeSection from "../home/HomeSection";
-import ProjectSection from "../projects/ProjectSection";
-import CoursesSection from "../courses/CoursesSection";
-import ContactSection from "../contact/ContactSection";
+import Home from "../../pages/Home";
+import Projects from "../../pages/Projects";
+import Courses from "../../pages/Courses";
+import Contact from "../../pages/Contact";
 
 const MainSections = () => {
     return (
         <>
-            <HomeSection id="home" />
-            <ProjectSection id="projects" />
-            <CoursesSection id="courses"/>
-            <ContactSection id="contact" />
+            <Home id="home" />
+            <Projects id="projects" />
+            <Courses id="courses"/>
+            <Contact id="contact" />
         </>
     )
 }
