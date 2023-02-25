@@ -19,5 +19,5 @@
 .list-item:hover a {
     background-color: var(--light-white);
     color: var(--light-purple);
-    transition: .5s;
+    transition: 0.5s;
 }

@@ -7,7 +7,7 @@ const Header = () => {
             <MainNavigation />
             <ScrollToTop />
         </header>
-    )
-}
+    );
+};
 
 export default Header;

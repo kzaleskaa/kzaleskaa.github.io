@@ -1,10 +1,11 @@
-.links-list, .links-list a {
+.links-list,
+.links-list a {
     color: var(--light-white);
 }
 
 .list-item:hover a {
     opacity: 0.8;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .icon {

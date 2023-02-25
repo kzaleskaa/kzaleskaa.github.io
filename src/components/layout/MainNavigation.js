@@ -13,32 +13,40 @@ const MainNavigation = () => {
         } else {
             setIsMobile(false);
         }
-    }
+    };
 
     const closeExpandedMenu = () => {
         if (isMobile) {
-            setIsNavExpanded(prev => !prev);
+            setIsNavExpanded((prev) => !prev);
         }
-    }
+    };
 
     useEffect(() => {
         handleResize();
         window.addEventListener("resize", handleResize);
-    })
+    });
 
     useEffect(() => {
-        if(isNavExpanded) {
+        if (isNavExpanded) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "auto";
         }
-    }, [isNavExpanded])
+    }, [isNavExpanded]);
 
     return (
-        <nav className={`${styles["main-navigation"]} ${isNavExpanded && styles["expanded-menu"]}`}>
-            <div 
-                className={`${styles["nav-burger"]} ${isNavExpanded &&  styles["open"]}`}
-                onClick={() => {setIsNavExpanded(prev => !prev)}}
+        <nav
+            className={`${styles["main-navigation"]} ${
+                isNavExpanded && styles["expanded-menu"]
+            }`}
+        >
+            <div
+                className={`${styles["nav-burger"]} ${
+                    isNavExpanded && styles["open"]
+                }`}
+                onClick={() => {
+                    setIsNavExpanded((prev) => !prev);
+                }}
             >
                 <span></span>
                 <span></span>
@@ -55,7 +63,9 @@ const MainNavigation = () => {
                         smooth
                         offset={-70}
                         duration={500}
-                    >Home</Link>
+                    >
+                        Home
+                    </Link>
                 </li>
                 <li className={styles["nav-item"]}>
                     <Link
@@ -67,7 +77,9 @@ const MainNavigation = () => {
                         smooth
                         offset={-70}
                         duration={500}
-                    >Projects</Link>
+                    >
+                        Projects
+                    </Link>
                 </li>
                 <li className={styles["nav-item"]}>
                     <Link
@@ -79,7 +91,9 @@ const MainNavigation = () => {
                         smooth
                         offset={-70}
                         duration={500}
-                >Courses</Link>
+                    >
+                        Courses
+                    </Link>
                 </li>
                 <li className={styles["nav-item"]}>
                     <Link
@@ -91,12 +105,13 @@ const MainNavigation = () => {
                         smooth
                         offset={-70}
                         duration={500}
-                >Contact</Link>
+                    >
+                        Contact
+                    </Link>
                 </li>
             </ul>
         </nav>
-    )
-
-}
+    );
+};
 
 export default MainNavigation;

@@ -8,10 +8,10 @@ const MainSections = () => {
         <>
             <Home id="home" />
             <Projects id="projects" />
-            <Courses id="courses"/>
+            <Courses id="courses" />
             <Contact id="contact" />
         </>
-    )
-}
+    );
+};
 
 export default MainSections;
