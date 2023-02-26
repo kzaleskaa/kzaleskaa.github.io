@@ -1,55 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 :root {
-    --dark-gray: #242222;
-    --light-gray: #aaa1a8;
-    --light-white: #f3f3f3;
-    --light-brown: #9e938f;
-    --light-purple: #a37dc2;
+  --dark-gray: #242222;
+  --light-gray: #aaa1a8;
+  --light-white: #f3f3f3;
+  --light-brown: #9e938f;
+  --light-purple: #a37dc2;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    background-color: var(--dark-gray);
-    color: var(--light-white);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: var(--dark-gray);
+  color: var(--light-white);
 }
 
 #root {
-    margin: 0 auto;
-    max-width: 1440px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: var(--light-purple);
+  text-decoration: none;
+  color: var(--light-purple);
 }
 
 section {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 section h3:first-child {
-    text-align: center;
+  text-align: center;
 }
 
 h1,
 h2,
 h3 {
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 }

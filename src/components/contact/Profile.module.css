@@ -1,8 +1,8 @@
 .profile-img {
-    border-radius: 50%;
-    width: 90%;
-    max-width: 240px;
-    -webkit-box-shadow: 0px 0px 24px 0px var(--light-purple);
-    -moz-box-shadow: 0px 0px 24px 0px var(--light-purple);
-    box-shadow: 0px 0px 24px 0px var(--light-purple);
+  border-radius: 50%;
+  width: 90%;
+  max-width: 240px;
+  -webkit-box-shadow: 0px 0px 24px 0px var(--light-purple);
+  -moz-box-shadow: 0px 0px 24px 0px var(--light-purple);
+  box-shadow: 0px 0px 24px 0px var(--light-purple);
 }

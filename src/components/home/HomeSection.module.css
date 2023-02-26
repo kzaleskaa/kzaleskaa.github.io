@@ -1,102 +1,102 @@
 .section {
-    height: calc(100vh - 60px);
-    max-height: 1000px;
-    margin-top: 60px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  height: calc(100vh - 60px);
+  max-height: 1000px;
+  margin-top: 60px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section img {
-    width: 80%;
-    max-width: 470px;
-    border-radius: 50%;
-    margin: 0 auto;
-    box-shadow: 2px 2px var(--light-purple);
+  width: 80%;
+  max-width: 470px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 2px 2px var(--light-purple);
 }
 
 .section h1 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .section h2,
 .section h3 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .links {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .scroll-link {
-    padding: 6px;
-    border-radius: 14px;
-    background-color: var(--light-purple);
-    color: var(--light-white);
-    cursor: pointer;
-    transition: 0.4s;
+  padding: 6px;
+  border-radius: 14px;
+  background-color: var(--light-purple);
+  color: var(--light-white);
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 .scroll-link:hover {
-    color: var(--light-purple);
-    background-color: var(--light-white);
+  color: var(--light-purple);
+  background-color: var(--light-white);
 }
 
 .scroll-link .icon {
-    animation: move-arrow infinite 1s;
+  animation: move-arrow infinite 1s;
 }
 
 @keyframes move-arrow {
-    0% {
-        transform: translateY(-6px);
-    }
-    100% {
-        transform: translateY(6px);
-    }
+  0% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(6px);
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .section {
-        display: grid;
-        justify-content: space-between;
-        grid-template-areas: "title img" "scroll scroll";
-        grid-template-columns: 1fr 1.3fr;
-        padding: 40px;
-    }
+  .section {
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "title img" "scroll scroll";
+    grid-template-columns: 1fr 1.3fr;
+    padding: 40px;
+  }
 
-    .section div {
-        grid-area: title;
-    }
+  .section div {
+    grid-area: title;
+  }
 
-    .section img {
-        grid-area: img;
-    }
+  .section img {
+    grid-area: img;
+  }
 
-    .section .scroll-link {
-        grid-area: scroll;
-        margin: 0px auto;
-        align-self: flex-end;
-    }
+  .section .scroll-link {
+    grid-area: scroll;
+    margin: 0px auto;
+    align-self: flex-end;
+  }
 
-    .section h1 {
-        font-size: 26px;
-    }
+  .section h1 {
+    font-size: 26px;
+  }
 
-    .section h2,
-    .section h3 {
-        font-size: 36px;
-    }
+  .section h2,
+  .section h3 {
+    font-size: 36px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .section h1 {
-        font-size: 46px;
-    }
+  .section h1 {
+    font-size: 46px;
+  }
 
-    .section h2,
-    .section h3 {
-        font-size: 56px;
-    }
+  .section h2,
+  .section h3 {
+    font-size: 56px;
+  }
 }
