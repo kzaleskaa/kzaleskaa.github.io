@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import NavLink from "./NavLink";
 
 import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
+  const [activeNavLinkId, setActiveNavLinkId] = useState("");
+
+  const navLinks = [
+    { navLinkId: "Home", scrollToId: "home" },
+    { navLinkId: "Projects", scrollToId: "projects" },
+    { navLinkId: "Courses", scrollToId: "courses" },
+    { navLinkId: "Contact", scrollToId: "contact" },
+  ];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -51,62 +59,16 @@ const MainNavigation = () => {
         <span></span>
       </div>
       <ul>
-        <li className={styles["nav-item"]}>
-          <Link
-            activeClass={styles["active-link"]}
-            className={styles.link}
-            to="home"
-            onClick={closeExpandedMenu}
-            spy
-            smooth
-            offset={-70}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
-        <li className={styles["nav-item"]}>
-          <Link
-            activeClass={styles["active-link"]}
-            className={styles.link}
-            to="projects"
-            onClick={closeExpandedMenu}
-            spy
-            smooth
-            offset={-70}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className={styles["nav-item"]}>
-          <Link
-            activeClass={styles["active-link"]}
-            className={styles.link}
-            to="courses"
-            onClick={closeExpandedMenu}
-            spy
-            smooth
-            offset={-70}
-            duration={500}
-          >
-            Courses
-          </Link>
-        </li>
-        <li className={styles["nav-item"]}>
-          <Link
-            activeClass={styles["active-link"]}
-            className={styles.link}
-            to="contact"
-            onClick={closeExpandedMenu}
-            spy
-            smooth
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li>
+        {navLinks.map(({ navLinkId, scrollToId }) => (
+          <li className={styles["nav-item"]}>
+            <NavLink
+              navLinkId={navLinkId}
+              scrollToId={scrollToId}
+              activeNavLinkId={activeNavLinkId}
+              setActiveNavLinkId={setActiveNavLinkId}
+            />
+          </li>
+        ))}
       </ul>
     </nav>
   );

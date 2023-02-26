@@ -1,7 +1,7 @@
 .item {
     position: relative;
     width: 100%;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 50px 20px;
     border-radius: 4px;
     border-top: 2px solid var(--light-purple);
     -webkit-box-shadow: 0px 0px 10px -5px var(--light-purple);
@@ -32,6 +32,47 @@
 .title {
     margin: 12px 0px;
     /* text-shadow: 5px 5px 10px var(--light-purple); */
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 4px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: var(--light-purple);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.services-link {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    bottom: 10px;
+    position: absolute;
+}
+
+.link {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    border-radius: 100%;
+    background-color: var(--light-purple);
+    color: var(--light-white);
+    cursor: pointer;
+}
+
+.link:hover {
+    background-color: var(--light-white);
+    color: var(--light-purple);
+    transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
