@@ -14,6 +14,7 @@ const MainNavigation = () => {
   ];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const sections = document.querySelectorAll('section');
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -41,6 +42,17 @@ const MainNavigation = () => {
       document.body.style.overflow = "auto";
     }
   }, [isNavExpanded]);
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      let sectionTop = section.offsetTop;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+        setActiveNavLinkId(current);
+      }
+    });
+  })
 
   return (
     <nav

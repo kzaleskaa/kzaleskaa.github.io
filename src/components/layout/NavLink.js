@@ -1,4 +1,4 @@
-import { ClassNames } from "@emotion/react";
+import styles from "./NavLink.module.css";
 
 const NavLink = ({
   navLinkId,
@@ -16,7 +16,7 @@ const NavLink = ({
   return (
     <span
       id={navLinkId}
-      className={activeNavLinkId == navLinkId ? "activeClass" : ""}
+      className={activeNavLinkId === navLinkId ? styles["active-link"] : ""}
       onClick={handleClick}
     >
       {navLinkId}
