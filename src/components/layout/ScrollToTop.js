@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpLong } from "@fortawesome/free-solid-svg-icons";
+import { animateScroll as scroll } from 'react-scroll';
 
 import styles from "./ScrollToTop.module.css";
 
@@ -18,7 +19,7 @@ const ScrollToTop = () => {
   });
 
   const scrollToTop = () => {
-    // scroll.scrollToTop();
+    scroll.scrollToTop();
   };
 
   return (

@@ -11,7 +11,14 @@ const Home = (props) => {
     <section id={props.id} className={styles.section}>
       <InformationBlock />
       <img src={homeImage} alt="home profile" />
-      <Link to="projects" offset={-50} duration={500} smooth spy>
+      <Link
+        className={styles["scroll-link"]}
+        to="projects"
+        spy
+        smooth
+        offset={-70}
+        duration={500}
+      >
         My portfolio &nbsp;
         <FontAwesomeIcon icon={faAnglesDown} className={styles.icon} />
       </Link>

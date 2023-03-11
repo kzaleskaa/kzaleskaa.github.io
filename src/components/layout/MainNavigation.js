@@ -14,7 +14,7 @@ const MainNavigation = () => {
   ];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const sections = document.querySelectorAll('section');
+  const sections = document.querySelectorAll("section");
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -43,28 +43,6 @@ const MainNavigation = () => {
     }
   }, [isNavExpanded]);
 
-  // function to set active nav link  
-  const setActiveNavLink = () => {
-    const currentScrollPosition = window.pageYOffset;
-    const sections = document.querySelectorAll('section');
-    const arratOfSections = Array.from(sections);
-
-    arratOfSections.slice(0, -1).forEach((val, key, arr) => {
-      const sectionTop = val.offsetTop;
-      const sectionHeight = val.offsetHeight;
-      const sectionId = val.getAttribute('id');
-      if (currentScrollPosition >= sectionTop && currentScrollPosition < sectionTop + sectionHeight) {
-        setActiveNavLinkId(sectionId);
-      }
-    });
-  }
-  console.log(activeNavLinkId);
-
-  useEffect(() => {
-    setActiveNavLink();
-    window.addEventListener('scroll', setActiveNavLink);
-  }, []);
-
   return (
     <nav
       className={`${styles["main-navigation"]} ${
@@ -84,7 +62,16 @@ const MainNavigation = () => {
       <ul>
         {navLinks.map(({ navLinkId, scrollToId }) => (
           <li className={styles["nav-item"]}>
-            <Link to={scrollToId} offset={-50} duration={500} smooth spy>
+            <Link
+              to={scrollToId}
+              activeClass={styles["active-link"]}
+              className={styles.link}
+              onClick={closeExpandedMenu}
+              spy
+              smooth
+              offset={-70}
+              duration={500}
+            >
               {navLinkId}
             </Link>
           </li>
