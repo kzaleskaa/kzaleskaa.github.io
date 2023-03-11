@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import NavLink from "./NavLink";
+import { Link, animateScroll as scroll, scroller } from "react-scroll";
 
 import styles from "./MainNavigation.module.css";
 
@@ -43,16 +43,27 @@ const MainNavigation = () => {
     }
   }, [isNavExpanded]);
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      let sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-        setActiveNavLinkId(current);
+  // function to set active nav link  
+  const setActiveNavLink = () => {
+    const currentScrollPosition = window.pageYOffset;
+    const sections = document.querySelectorAll('section');
+    const arratOfSections = Array.from(sections);
+
+    arratOfSections.slice(0, -1).forEach((val, key, arr) => {
+      const sectionTop = val.offsetTop;
+      const sectionHeight = val.offsetHeight;
+      const sectionId = val.getAttribute('id');
+      if (currentScrollPosition >= sectionTop && currentScrollPosition < sectionTop + sectionHeight) {
+        setActiveNavLinkId(sectionId);
       }
     });
-  })
+  }
+  console.log(activeNavLinkId);
+
+  useEffect(() => {
+    setActiveNavLink();
+    window.addEventListener('scroll', setActiveNavLink);
+  }, []);
 
   return (
     <nav
@@ -73,12 +84,9 @@ const MainNavigation = () => {
       <ul>
         {navLinks.map(({ navLinkId, scrollToId }) => (
           <li className={styles["nav-item"]}>
-            <NavLink
-              navLinkId={navLinkId}
-              scrollToId={scrollToId}
-              activeNavLinkId={activeNavLinkId}
-              setActiveNavLinkId={setActiveNavLinkId}
-            />
+            <Link to={scrollToId} offset={-50} duration={500} smooth spy>
+              {navLinkId}
+            </Link>
           </li>
         ))}
       </ul>

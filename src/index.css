@@ -6,6 +6,7 @@
   --light-white: #f3f3f3;
   --light-brown: #9e938f;
   --light-purple: #a37dc2;
+  --header-height: 70px;
 }
 
 *,
@@ -42,6 +43,7 @@ a {
 
 section {
   margin: 20px 0px;
+  scroll-margin-top: var(--header-height);
 }
 
 section h3:first-child {

@@ -7,7 +7,6 @@ import styles from "./ProjectItem.module.css";
 const ProjectItem = (props) => {
   const { image, title, description, tags, github, live } = props.data;
 
-  console.log(tags);
   return (
     <div className={styles.item}>
       <div className={styles["img-container"]}>
