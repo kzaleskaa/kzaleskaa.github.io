@@ -4,17 +4,13 @@ import { Link, animateScroll as scroll, scroller } from "react-scroll";
 import styles from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
-  const [activeNavLinkId, setActiveNavLinkId] = useState("");
-
   const navLinks = [
     { navLinkId: "Home", scrollToId: "home" },
     { navLinkId: "Projects", scrollToId: "projects" },
     { navLinkId: "Courses", scrollToId: "courses" },
-    { navLinkId: "Contact", scrollToId: "contact" },
   ];
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const sections = document.querySelectorAll("section");
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -69,7 +65,7 @@ const MainNavigation = () => {
               onClick={closeExpandedMenu}
               spy
               smooth
-              offset={-70}
+              offset={-80}
               duration={500}
             >
               {navLinkId}
