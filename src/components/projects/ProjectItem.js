@@ -14,7 +14,7 @@ const ProjectItem = (props) => {
       </div>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles["tag-container"]}>
-        {tags.map(tag => <span className={styles.tag}>{tag}</span>)}
+        {tags.map((tag, idx) => <span key={`tag-${props.project_id}-${idx}`} className={styles.tag}>{tag}</span>)}
       </div>
       <p>{description}</p>
       <div className={styles["services-link"]}>

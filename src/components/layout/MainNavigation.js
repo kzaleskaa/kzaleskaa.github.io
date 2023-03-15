@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, animateScroll as scroll, scroller } from "react-scroll";
+import { Link } from "react-scroll";
 
 import styles from "./MainNavigation.module.css";
 
@@ -57,7 +57,7 @@ const MainNavigation = () => {
       </div>
       <ul>
         {navLinks.map(({ navLinkId, scrollToId }) => (
-          <li className={styles["nav-item"]}>
+          <li className={styles["nav-item"]} key={`link-${navLinkId}`}>
             <Link
               to={scrollToId}
               activeClass={styles["active-link"]}
