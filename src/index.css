@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 :root {
   --dark-gray: #242222;
@@ -6,9 +6,12 @@
   --light-white: #f3f3f3;
   --light-brown: #9e938f;
   --light-purple: #a37dc2;
+  --header-height: 70px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -18,7 +21,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   background-color: var(--dark-gray);
   color: var(--light-white);
@@ -40,12 +43,15 @@ a {
 
 section {
   margin: 20px 0px;
+  scroll-margin-top: var(--header-height);
 }
 
 section h3:first-child {
   text-align: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   letter-spacing: 2px;
 }

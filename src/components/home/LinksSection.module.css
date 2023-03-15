@@ -1,23 +1,24 @@
 .links-list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 8px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  margin-top: 20px;
 }
 
 .list-item a {
-    display: inline-block;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    border-radius: 100%;
-    background-color: var(--light-purple);
-    color: var(--light-white);
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 100%;
+  background-color: var(--light-purple);
+  color: var(--light-white);
 }
 
 .list-item:hover a {
-    background-color: var(--light-white);
-    color: var(--light-purple);
-    transition: .5s;
+  background-color: var(--light-white);
+  color: var(--light-purple);
+  transition: 0.5s;
 }
