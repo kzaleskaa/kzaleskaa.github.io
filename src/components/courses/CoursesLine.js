@@ -1,4 +1,7 @@
-import courses from "./data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIdCard } from "@fortawesome/free-solid-svg-icons";
+import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
+import courses from "../../data/courses";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -25,6 +28,7 @@ const CoursesLine = () => {
               background: "var(--light-gray)",
               color: "#fff",
             }}
+            icon={el.icon}
           >
             <h3 className="vertical-timeline-element-title">{el.name}</h3>
             <p>{el.description}</p>
@@ -33,6 +37,7 @@ const CoursesLine = () => {
       })}
       <VerticalTimelineElement
         iconStyle={{ background: "var(--light-purple)", color: "#fff" }}
+        icon={<FontAwesomeIcon icon={faPhoneVolume} />}
       />
     </VerticalTimeline>
   );
