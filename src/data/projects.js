@@ -24,7 +24,7 @@ const projects = [
       "https://user-images.githubusercontent.com/62251989/227058825-975a5919-ef2d-405c-8714-05504f3c487a.png",
     title: "Social Media App",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      "A fullstack web application that allows you to create an account, publish posts, follow other users, like and comment on posts. The application uses a djoser library which is a REST implementation of Django authentication system. JSON Web Token is a selected authentication backend.",
     tags: [
       "Django",
       "React",

@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import courses from "../../data/courses";
 import {
