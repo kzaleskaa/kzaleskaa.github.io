@@ -44,7 +44,7 @@ const courses = [
     icon: <FontAwesomeIcon icon={faPython} />,
   },
   {
-    name: "The Complete Guide (incl Hooks, React Router, Redux)",
+    name: "React - The Complete Guide (incl Hooks, React Router, Redux)",
     company: "Udemy",
     date: "February 2022",
     description:
