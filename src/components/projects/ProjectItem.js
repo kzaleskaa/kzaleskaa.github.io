@@ -9,7 +9,7 @@ const ProjectItem = (props) => {
   const { image, title, description, tags, github, live } = props.data;
 
   return (
-    <Fade bottom>
+    <Fade left>
       <div className={styles.item}>
         <div className={styles["img-container"]}>
           <img src={image} alt="project demo" />
