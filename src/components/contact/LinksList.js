@@ -5,7 +5,6 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Slide } from "react-awesome-reveal";
 import Swing from 'react-reveal/Swing';
 
 import styles from "./LinksList.module.css";
