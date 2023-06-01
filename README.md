@@ -2,9 +2,11 @@
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;Nice+to+meet+you!&center=true&size=30">
   </a>
-
-  <img src="src/assets/images/profile.png" style="width: 100px">
-
+  
+  <div>
+    <img src="src/assets/images/profile.png" style="width: 100px">
+  </div>
+    
   <div id="badges">
     <a href="https://www.linkedin.com/in/kzaleskaa/">
       <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
