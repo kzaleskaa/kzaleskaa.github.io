@@ -1,15 +1,18 @@
-.section {
+.container {
   height: calc(100vh - 60px);
   max-height: 1000px;
   margin-top: 60px;
   padding: 12px;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.section img {
+.container img {
   width: 80%;
   max-width: 470px;
   border-radius: 50%;
@@ -58,7 +61,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .container {
     display: grid;
     justify-content: space-between;
     grid-template-areas: "title img" "scroll scroll";
@@ -66,15 +69,15 @@
     padding: 40px;
   }
 
-  .section div {
-    grid-area: title;
+  .container div {
+    grid-area: title !important;
   }
 
-  .section img {
+  .container img {
     grid-area: img;
   }
 
-  .section .scroll-link {
+  .container .scroll-link {
     grid-area: scroll;
     margin: 0px auto;
     align-self: flex-end;

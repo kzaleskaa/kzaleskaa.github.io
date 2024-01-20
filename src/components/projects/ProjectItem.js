@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 import styles from "./ProjectItem.module.css";
 
@@ -9,8 +9,8 @@ const ProjectItem = (props) => {
   const { image, title, description, tags, github, live } = props.data;
 
   return (
-    <Fade left>
-      <div className={styles.item}>
+    <Fade direction="left" className={styles.item}>
+      <div>
         <div className={styles["img-container"]}>
           <img src={image} alt="project demo" />
         </div>

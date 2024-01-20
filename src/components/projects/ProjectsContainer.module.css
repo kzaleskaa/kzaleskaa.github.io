@@ -1,12 +1,19 @@
 .container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
   justify-content: space-around;
+  height: 100%;
   row-gap: 20px;
   width: 100%;
   padding: 14px;
   border-radius: 32px;
+  max-width: 100%;
+}
+
+.container > * {
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .link a {
@@ -22,5 +29,9 @@
 @media screen and (min-width: 768px) {
   .container {
     flex-direction: row;
+  }
+  .container > * {
+    flex-grow: 1;
+    max-width: 30%;
   }
 }
