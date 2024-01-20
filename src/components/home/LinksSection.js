@@ -1,9 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./LinksSection.module.css";
@@ -24,11 +20,6 @@ const LinksSection = (props) => {
       <li className={styles["list-item"]}>
         <a href={process.env.REACT_APP_GITHUB_LINK}>
           <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-        </a>
-      </li>
-      <li className={styles["list-item"]}>
-        <a href={process.env.REACT_APP_INSTAGRAM_LINK}>
-          <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
         </a>
       </li>
     </ul>
