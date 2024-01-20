@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+      - run: echo "$REACT_APP_MAIL" "$REACT_APP_LINKEDIN_LINK" "$REACT_APP_GITHUB_LINK"
       - run: npm install --legacy-peer-deps --force
       - run: npm run build --if-present
 
