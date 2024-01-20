@@ -8,22 +8,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .card {
     display: grid;
-    grid-template-areas: "title title" "profile links";
+    grid-template-areas: "profile links";
+    align-items: center;
     row-gap: 40px;
     column-gap: 20px;
   }
 
-  .section h3 {
-    grid-area: title;
-  }
-
-  .section img {
+  .card img {
     grid-area: profile;
   }
 
-  .section ul {
+  .card ul {
     grid-area: links;
     text-align: left;
   }

@@ -1,16 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Swing from "react-reveal/Swing";
+
 
 import styles from "./LinksList.module.css";
 
 const LinksList = () => {
   return (
     <>
-      <Swing>
-        <h3>Contact me</h3>
-      </Swing>
       <ul className={styles["links-list"]}>
         <li className={styles["list-item"]}>
           <a href={"mailto:" + process.env.REACT_APP_MAIL}>
